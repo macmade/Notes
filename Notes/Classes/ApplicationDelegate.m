@@ -41,6 +41,8 @@
 
 - ( void )applicationDidFinishLaunching: ( NSNotification * )notification
 {
+    ( void )notification;
+    
     self.mainWindowController = [ MainWindowController new ];
     
     [ self.mainWindowController.window center ];
@@ -60,13 +62,15 @@
 
 - ( NSURL * )applicationDocumentsDirectory
 {
-    NSURL * url;
+    NSURL    * url;
+    NSString * identifier;
     
     @synchronized( self )
     {
-        url = [ [ [ NSFileManager defaultManager ] URLsForDirectory: NSApplicationSupportDirectory inDomains: NSUserDomainMask ] lastObject ];
+        url        = [ [ [ NSFileManager defaultManager ] URLsForDirectory: NSApplicationSupportDirectory inDomains: NSUserDomainMask ] lastObject ];
+        identifier = [ [ NSBundle mainBundle ] bundleIdentifier ];
         
-        return [ url URLByAppendingPathComponent: [ [ NSBundle mainBundle ] bundleIdentifier ] ];
+        return [ url URLByAppendingPathComponent: identifier ];
     }
 }
 
@@ -107,6 +111,7 @@
 
 - ( NSPersistentStoreCoordinator * )persistentStoreCoordinator
 {
+    NSString            * identifier;
     NSError             * error;
     NSMutableDictionary * errorInfo;
     NSString            * errorMessage;
@@ -114,6 +119,8 @@
     
     @synchronized( self )
     {
+        identifier = [ [ NSBundle mainBundle ] bundleIdentifier ];
+        
         if( self.persistentStoreCoordinatorInstance == nil )
         {
             {
@@ -164,7 +171,7 @@
                     errorInfo[ NSUnderlyingErrorKey ] = error;
                 }
                 
-                [ NSApp presentError: [ NSError errorWithDomain: [ [ NSBundle mainBundle ] bundleIdentifier ] code: 9999 userInfo: errorInfo ] ];
+                [ NSApp presentError: [ NSError errorWithDomain: identifier code: 9999 userInfo: errorInfo ] ];
             }
         }
         
@@ -177,6 +184,8 @@
 - ( IBAction )saveAction: ( id )sender
 {
     NSError * error;
+    
+    ( void )sender;
     
     if( [ self.managedObjectContext commitEditing ] == NO )
     {
@@ -191,6 +200,8 @@
 
 - ( NSUndoManager * )windowWillReturnUndoManager: ( NSWindow * )window
 {
+    ( void )window;
+    
     return self.managedObjectContext.undoManager;
 }
 
