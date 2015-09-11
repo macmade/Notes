@@ -26,11 +26,10 @@
 
 @interface ApplicationDelegate()
 
-@property( nonatomic, readwrite, weak   ) IBOutlet NSWindow                     * window;
-@property( atomic,    readonly          )          NSURL                        * applicationDocumentsDirectory;
-@property( atomic,    readwrite, strong )          NSManagedObjectModel         * managedObjectModelInstance;
-@property( atomic,    readwrite, strong )          NSManagedObjectContext       * managedObjectContextInstance;
-@property( atomic,    readwrite, strong )          NSPersistentStoreCoordinator * persistentStoreCoordinatorInstance;
+@property( atomic,    readonly          ) NSURL                        * applicationDocumentsDirectory;
+@property( atomic,    readwrite, strong ) NSManagedObjectModel         * managedObjectModelInstance;
+@property( atomic,    readwrite, strong ) NSManagedObjectContext       * managedObjectContextInstance;
+@property( atomic,    readwrite, strong ) NSPersistentStoreCoordinator * persistentStoreCoordinatorInstance;
 
 - ( IBAction )saveAction: ( id )sender;
 
