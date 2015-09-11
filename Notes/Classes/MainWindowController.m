@@ -22,15 +22,22 @@
  * THE SOFTWARE.
  ******************************************************************************/
 
-@import Cocoa;
+#import "MainWindowController.h"
 
-@class MainWindowController;
+@interface MainWindowController()
 
-@interface ApplicationDelegate: NSObject < NSApplicationDelegate >
+@end
 
-@property( atomic, readonly ) NSPersistentStoreCoordinator * persistentStoreCoordinator;
-@property( atomic, readonly ) NSManagedObjectModel         * managedObjectModel;
-@property( atomic, readonly ) NSManagedObjectContext       * managedObjectContext;
-@property( atomic, readonly ) MainWindowController         * mainWindowController;
+@implementation MainWindowController
+
+- ( instancetype )init
+{
+    return [ super initWithWindowNibName: NSStringFromClass( self.class ) ];
+}
+
+- ( void )windowDidLoad
+{
+    [ super windowDidLoad ];
+}
 
 @end

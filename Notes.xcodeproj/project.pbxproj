@@ -12,6 +12,8 @@
 		0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AD1BA34C8400131163 /* Notes.xcdatamodeld */; };
 		0588A9B51BA34C8400131163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9B01BA34C8400131163 /* Assets.xcassets */; };
 		0588A9B61BA34C8400131163 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9B11BA34C8400131163 /* MainMenu.xib */; };
+		0588A9B91BA358B200131163 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9B81BA358B200131163 /* MainWindowController.m */; };
+		0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9BA1BA3590F00131163 /* MainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		0588A9AE1BA34C8400131163 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		0588A9B01BA34C8400131163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0588A9B21BA34C8400131163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0588A9B71BA358B200131163 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		0588A9B81BA358B200131163 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		0588A9BB1BA3590F00131163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,8 @@
 			children = (
 				0588A9AA1BA34C8400131163 /* ApplicationDelegate.h */,
 				0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */,
+				0588A9B71BA358B200131163 /* MainWindowController.h */,
+				0588A9B81BA358B200131163 /* MainWindowController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 			children = (
 				0588A9B01BA34C8400131163 /* Assets.xcassets */,
 				0588A9B11BA34C8400131163 /* MainMenu.xib */,
+				0588A9BA1BA3590F00131163 /* MainWindowController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0588A9B51BA34C8400131163 /* Assets.xcassets in Resources */,
+				0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */,
 				0588A9B61BA34C8400131163 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +178,7 @@
 			files = (
 				0588A9B31BA34C8400131163 /* ApplicationDelegate.m in Sources */,
 				0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */,
+				0588A9B91BA358B200131163 /* MainWindowController.m in Sources */,
 				0588A99A1BA3492800131163 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +192,14 @@
 				0588A9B21BA34C8400131163 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		0588A9BA1BA3590F00131163 /* MainWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0588A9BB1BA3590F00131163 /* Base */,
+			);
+			name = MainWindowController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

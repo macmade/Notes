@@ -23,13 +23,15 @@
  ******************************************************************************/
 
 #import "ApplicationDelegate.h"
+#import "MainWindowController.h"
 
 @interface ApplicationDelegate()
 
-@property( atomic,    readonly          ) NSURL                        * applicationDocumentsDirectory;
-@property( atomic,    readwrite, strong ) NSManagedObjectModel         * managedObjectModelInstance;
-@property( atomic,    readwrite, strong ) NSManagedObjectContext       * managedObjectContextInstance;
-@property( atomic,    readwrite, strong ) NSPersistentStoreCoordinator * persistentStoreCoordinatorInstance;
+@property( atomic, readonly          ) NSURL                        * applicationDocumentsDirectory;
+@property( atomic, readwrite, strong ) NSManagedObjectModel         * managedObjectModelInstance;
+@property( atomic, readwrite, strong ) NSManagedObjectContext       * managedObjectContextInstance;
+@property( atomic, readwrite, strong ) NSPersistentStoreCoordinator * persistentStoreCoordinatorInstance;
+@property( atomic, readwrite, strong ) MainWindowController         * mainWindowController;
 
 - ( IBAction )saveAction: ( id )sender;
 
@@ -39,7 +41,10 @@
 
 - ( void )applicationDidFinishLaunching: ( NSNotification * )notification
 {
-    ( void )notification;
+    self.mainWindowController = [ MainWindowController new ];
+    
+    [ self.mainWindowController.window center ];
+    [ self.mainWindowController showWindow: nil ];
 }
 
 - ( void )applicationWillTerminate: ( NSNotification * )notification

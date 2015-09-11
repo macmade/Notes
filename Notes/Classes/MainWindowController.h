@@ -24,13 +24,6 @@
 
 @import Cocoa;
 
-@class MainWindowController;
-
-@interface ApplicationDelegate: NSObject < NSApplicationDelegate >
-
-@property( atomic, readonly ) NSPersistentStoreCoordinator * persistentStoreCoordinator;
-@property( atomic, readonly ) NSManagedObjectModel         * managedObjectModel;
-@property( atomic, readonly ) NSManagedObjectContext       * managedObjectContext;
-@property( atomic, readonly ) MainWindowController         * mainWindowController;
+@interface MainWindowController: NSWindowController
 
 @end
