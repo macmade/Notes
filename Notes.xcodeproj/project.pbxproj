@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0588A99A1BA3492800131163 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9991BA3492800131163 /* main.m */; };
-		0588A9B31BA34C8400131163 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AB1BA34C8400131163 /* AppDelegate.m */; };
+		0588A9B31BA34C8400131163 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */; };
 		0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AD1BA34C8400131163 /* Notes.xcdatamodeld */; };
 		0588A9B51BA34C8400131163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9B01BA34C8400131163 /* Assets.xcassets */; };
 		0588A9B61BA34C8400131163 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9B11BA34C8400131163 /* MainMenu.xib */; };
@@ -18,8 +18,8 @@
 		0588A9921BA3492800131163 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0588A9991BA3492800131163 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0588A9A31BA3492800131163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0588A9AA1BA34C8400131163 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0588A9AB1BA34C8400131163 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0588A9AA1BA34C8400131163 /* ApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
 		0588A9AE1BA34C8400131163 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		0588A9B01BA34C8400131163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0588A9B21BA34C8400131163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		0588A9A91BA34C8400131163 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0588A9AA1BA34C8400131163 /* AppDelegate.h */,
-				0588A9AB1BA34C8400131163 /* AppDelegate.m */,
+				0588A9AA1BA34C8400131163 /* ApplicationDelegate.h */,
+				0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0588A9B31BA34C8400131163 /* AppDelegate.m in Sources */,
+				0588A9B31BA34C8400131163 /* ApplicationDelegate.m in Sources */,
 				0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */,
 				0588A99A1BA3492800131163 /* main.m in Sources */,
 			);

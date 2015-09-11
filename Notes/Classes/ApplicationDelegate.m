@@ -6,16 +6,16 @@
 //  Copyright © 2015 XS-Labs. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "ApplicationDelegate.h"
 
-@interface AppDelegate ()
+@interface ApplicationDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
 - (IBAction)saveAction:(id)sender;
 
 @end
 
-@implementation AppDelegate
+@implementation ApplicationDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
