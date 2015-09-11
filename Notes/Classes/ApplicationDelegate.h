@@ -26,6 +26,8 @@
 
 @class MainWindowController;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ApplicationDelegate: NSObject < NSApplicationDelegate >
 
 @property( atomic, readonly ) NSPersistentStoreCoordinator * persistentStoreCoordinator;
@@ -34,3 +36,5 @@
 @property( atomic, readonly ) MainWindowController         * mainWindowController;
 
 @end
+
+NS_ASSUME_NONNULL_END
