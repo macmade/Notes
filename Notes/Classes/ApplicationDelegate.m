@@ -54,6 +54,13 @@
     ( void )notification;
 }
 
+- ( BOOL )applicationShouldTerminateAfterLastWindowClosed: ( NSApplication * )sender
+{
+    ( void )sender;
+    
+    return YES;
+}
+
 #pragma mark - Core Data stack
 
 @synthesize persistentStoreCoordinator  = _persistentStoreCoordinator;
