@@ -9,7 +9,7 @@ Notes
 
 ### About
 
-Simple Cocoa notes application.
+Simple Cocoa notes application using CoreData.
 
 License
 -------
