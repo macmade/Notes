@@ -26,6 +26,9 @@
 
 @interface MainWindowController()
 
+@property( nonatomic, readwrite, strong ) IBOutlet NSArrayController * groupsArrayController;
+@property( nonatomic, readwrite, strong ) IBOutlet NSArrayController * notesArrayController;
+
 @end
 
 @implementation MainWindowController
@@ -38,6 +41,9 @@
 - ( void )windowDidLoad
 {
     [ super windowDidLoad ];
+    
+    self.groupsArrayController.sortDescriptors = @[ [ NSSortDescriptor sortDescriptorWithKey: @"name"  ascending: YES ] ];
+    self.notesArrayController.sortDescriptors  = @[ [ NSSortDescriptor sortDescriptorWithKey: @"title" ascending: YES ] ];
 }
 
 @end
