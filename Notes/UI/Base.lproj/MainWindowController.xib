@@ -79,6 +79,9 @@
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                             </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="frq-YR-9IT" name="value" keyPath="objectValue.name" id="fIE-Ej-4p9"/>
+                                                                            </connections>
                                                                         </textField>
                                                                     </subviews>
                                                                     <constraints>
@@ -95,8 +98,16 @@
                                                                     </connections>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
+                                                            <connections>
+                                                                <binding destination="08P-02-BH0" name="value" keyPath="arrangedObjects" id="rsx-OA-riJ"/>
+                                                            </connections>
                                                         </tableColumn>
                                                     </tableColumns>
+                                                    <connections>
+                                                        <binding destination="08P-02-BH0" name="content" keyPath="arrangedObjects" id="NVo-oF-fVT"/>
+                                                        <binding destination="08P-02-BH0" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="NVo-oF-fVT" id="xXC-De-qed"/>
+                                                        <binding destination="08P-02-BH0" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="xXC-De-qed" id="Yal-Df-dZI"/>
+                                                    </connections>
                                                 </tableView>
                                             </subviews>
                                             <animations/>
@@ -129,6 +140,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="add:" target="08P-02-BH0" id="o5U-zB-cgt"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="53A-r3-YnQ">
                                         <rect key="frame" x="21" y="0.0" width="21" height="21"/>
@@ -140,6 +154,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="remove:" target="08P-02-BH0" id="3Uc-6R-8Ec"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -345,6 +362,11 @@
                 </defaultToolbarItems>
             </toolbar>
         </window>
+        <arrayController mode="entity" entityName="Group" automaticallyPreparesContent="YES" id="08P-02-BH0" userLabel="Groups">
+            <connections>
+                <binding destination="-3" name="managedObjectContext" keyPath="delegate.data.context" id="hPe-cP-b7P"/>
+            </connections>
+        </arrayController>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
