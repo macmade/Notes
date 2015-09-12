@@ -31,7 +31,7 @@
 @property( atomic, readwrite, strong ) CoreDataModel        * data;
 @property( atomic, readwrite, strong ) MainWindowController * mainWindowController;
 
-- ( IBAction )saveAction: ( id )sender;
+- ( IBAction )saveDocument: ( id )sender;
 
 @end
 
@@ -69,7 +69,7 @@
 
 #pragma mark - Core Data Saving and Undo support
 
-- ( IBAction )saveAction: ( id )sender
+- ( IBAction )saveDocument: ( id )sender
 {
     NSError * error;
     
