@@ -205,6 +205,7 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <sortDescriptor key="sortDescriptorPrototype" selector="localizedCaseInsensitiveCompare:" sortKey="title"/>
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="f2K-TW-eaC">
@@ -224,6 +225,9 @@
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="f2K-TW-eaC" name="value" keyPath="objectValue.title" id="zxE-MF-so1"/>
+                                                                            </connections>
                                                                         </textField>
                                                                     </subviews>
                                                                     <animations/>
@@ -232,6 +236,9 @@
                                                                     </connections>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
+                                                            <connections>
+                                                                <binding destination="65l-ny-Fyh" name="value" keyPath="arrangedObjects" id="aWs-L2-EDW"/>
+                                                            </connections>
                                                         </tableColumn>
                                                         <tableColumn width="203.5" minWidth="40" maxWidth="1000" id="qeq-za-EXG">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Date">
@@ -244,6 +251,7 @@
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
+                                                            <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="date"/>
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="l4h-1A-b1R">
@@ -259,6 +267,9 @@
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="l4h-1A-b1R" name="value" keyPath="objectValue.date" id="atV-vm-dul"/>
+                                                                            </connections>
                                                                         </textField>
                                                                     </subviews>
                                                                     <animations/>
@@ -267,8 +278,16 @@
                                                                     </connections>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
+                                                            <connections>
+                                                                <binding destination="65l-ny-Fyh" name="value" keyPath="arrangedObjects" id="v4B-om-NTa"/>
+                                                            </connections>
                                                         </tableColumn>
                                                     </tableColumns>
+                                                    <connections>
+                                                        <binding destination="65l-ny-Fyh" name="content" keyPath="arrangedObjects" id="Vdl-xl-jse"/>
+                                                        <binding destination="65l-ny-Fyh" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Vdl-xl-jse" id="Ocl-fF-yAl"/>
+                                                        <binding destination="65l-ny-Fyh" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="Ocl-fF-yAl" id="VRL-c6-vGA"/>
+                                                    </connections>
                                                 </tableView>
                                             </subviews>
                                             <animations/>
@@ -308,6 +327,9 @@
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="610" height="430"/>
                                                     <size key="maxSize" width="610" height="10000000"/>
+                                                    <connections>
+                                                        <binding destination="65l-ny-Fyh" name="attributedString" keyPath="selection.content" id="GlH-pf-O5Y"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                             <animations/>
@@ -352,8 +374,16 @@
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="r8d-MD-orB"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Frg-1I-3P6"/>
-                    <toolbarItem implicitItemIdentifier="439530B4-6540-4BB1-B683-2D879F08AD53" label="New Note" paletteLabel="New Note" tag="-1" id="Exa-rr-Vis"/>
-                    <toolbarItem implicitItemIdentifier="02B5BD48-E0C9-4D57-AAA3-B96C63724F8A" label="Delete Note" paletteLabel="Delete Note" tag="-1" id="rQQ-qm-1q4"/>
+                    <toolbarItem implicitItemIdentifier="439530B4-6540-4BB1-B683-2D879F08AD53" label="New Note" paletteLabel="New Note" tag="-1" id="Exa-rr-Vis">
+                        <connections>
+                            <action selector="add:" target="65l-ny-Fyh" id="cC4-Uk-x6E"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="02B5BD48-E0C9-4D57-AAA3-B96C63724F8A" label="Delete Note" paletteLabel="Delete Note" tag="-1" id="rQQ-qm-1q4">
+                        <connections>
+                            <action selector="remove:" target="65l-ny-Fyh" id="UkG-rv-BZ2"/>
+                        </connections>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="Frg-1I-3P6"/>
@@ -367,6 +397,11 @@
         <arrayController mode="entity" entityName="Group" automaticallyPreparesContent="YES" id="08P-02-BH0" userLabel="Groups">
             <connections>
                 <binding destination="-3" name="managedObjectContext" keyPath="delegate.data.context" id="hPe-cP-b7P"/>
+            </connections>
+        </arrayController>
+        <arrayController mode="entity" entityName="Note" automaticallyPreparesContent="YES" id="65l-ny-Fyh" userLabel="Notes">
+            <connections>
+                <binding destination="-3" name="managedObjectContext" keyPath="delegate.data.context" id="C1W-SQ-bXo"/>
             </connections>
         </arrayController>
     </objects>

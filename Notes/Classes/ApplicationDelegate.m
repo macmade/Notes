@@ -80,7 +80,7 @@
         NSLog( @"%@:%@ - Unable to commit editing before saving", self.class, NSStringFromSelector( _cmd ) );
     }
     
-    if( self.data.context.hasChanges && [ self.data.context save: &error ] )
+    if( self.data.context.hasChanges && [ self.data.context save: &error ] == NO )
     {
         [ [ NSApplication sharedApplication ] presentError: error ];
     }
