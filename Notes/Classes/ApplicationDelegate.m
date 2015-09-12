@@ -23,15 +23,13 @@
  ******************************************************************************/
 
 #import "ApplicationDelegate.h"
+#import "CoreDataModel.h"
 #import "MainWindowController.h"
 
 @interface ApplicationDelegate()
 
-@property( atomic, readonly          ) NSURL                        * applicationDocumentsDirectory;
-@property( atomic, readwrite, strong ) NSManagedObjectModel         * managedObjectModelInstance;
-@property( atomic, readwrite, strong ) NSManagedObjectContext       * managedObjectContextInstance;
-@property( atomic, readwrite, strong ) NSPersistentStoreCoordinator * persistentStoreCoordinatorInstance;
-@property( atomic, readwrite, strong ) MainWindowController         * mainWindowController;
+@property( atomic, readwrite, strong ) CoreDataModel        * data;
+@property( atomic, readwrite, strong ) MainWindowController * mainWindowController;
 
 - ( IBAction )saveAction: ( id )sender;
 
@@ -41,12 +39,20 @@
 
 - ( void )applicationDidFinishLaunching: ( NSNotification * )notification
 {
+    CoreDataModel * data;
+    
     ( void )notification;
     
-    self.mainWindowController = [ MainWindowController new ];
+    data = [ [ CoreDataModel alloc ] initWithModelName: @"Notes" storeType: NSSQLiteStoreType ];
     
-    [ self.mainWindowController.window center ];
-    [ self.mainWindowController showWindow: nil ];
+    if( data != nil )
+    {
+        self.data                 = data;
+        self.mainWindowController = [ MainWindowController new ];
+        
+        [ self.mainWindowController.window center ];
+        [ self.mainWindowController showWindow: nil ];
+    }
 }
 
 - ( void )applicationWillTerminate: ( NSNotification * )notification
@@ -61,131 +67,6 @@
     return YES;
 }
 
-#pragma mark - Core Data stack
-
-@synthesize persistentStoreCoordinator  = _persistentStoreCoordinator;
-@synthesize managedObjectModel          = _managedObjectModel;
-@synthesize managedObjectContext        = _managedObjectContext;
-
-- ( NSURL * )applicationDocumentsDirectory
-{
-    NSURL    * url;
-    NSString * identifier;
-    
-    @synchronized( self )
-    {
-        url        = [ [ [ NSFileManager defaultManager ] URLsForDirectory: NSApplicationSupportDirectory inDomains: NSUserDomainMask ] lastObject ];
-        identifier = [ [ NSBundle mainBundle ] bundleIdentifier ];
-        
-        return [ url URLByAppendingPathComponent: identifier ];
-    }
-}
-
-- ( NSManagedObjectModel * )managedObjectModel
-{
-    NSURL * url;
-    
-    @synchronized( self )
-    {
-        if ( self.managedObjectModelInstance == nil )
-        {
-            url                             = [ [ NSBundle mainBundle ] URLForResource: @"Notes" withExtension: @"momd" ];
-            self.managedObjectModelInstance = [ [ NSManagedObjectModel alloc ] initWithContentsOfURL: url ];
-        }
-        
-        return self.managedObjectModelInstance;
-    }
-}
-
-- ( NSManagedObjectContext * )managedObjectContext
-{
-    @synchronized( self )
-    {
-        if( self.managedObjectModelInstance == nil )
-        {
-            if( self.persistentStoreCoordinator == nil )
-            {
-                return nil;
-            }
-            
-            self.managedObjectContextInstance                            = [ [ NSManagedObjectContext alloc ] initWithConcurrencyType: NSMainQueueConcurrencyType ];
-            self.managedObjectContextInstance.persistentStoreCoordinator = self.persistentStoreCoordinator;
-        }
-        
-        return _managedObjectContext;
-    }
-}
-
-- ( NSPersistentStoreCoordinator * )persistentStoreCoordinator
-{
-    NSString            * identifier;
-    NSError             * error;
-    NSMutableDictionary * errorInfo;
-    NSString            * errorMessage;
-    BOOL                  failure;
-    
-    @synchronized( self )
-    {
-        identifier = [ [ NSBundle mainBundle ] bundleIdentifier ];
-        
-        if( self.persistentStoreCoordinatorInstance == nil )
-        {
-            {
-                NSDictionary * properties;
-                
-                errorMessage = @"There was an error creating or loading the application's saved data.";
-                properties   = [ self.applicationDocumentsDirectory resourceValuesForKeys: @[ NSURLIsDirectoryKey ] error: &error ];
-                
-                if( properties )
-                {
-                    if( [ properties[ NSURLIsDirectoryKey ] boolValue ] == NO )
-                    {
-                        errorMessage = [ NSString stringWithFormat: @"Expected a folder to store application data, found a file (%@).", self.applicationDocumentsDirectory.path ];
-                        failure      = YES;
-                    }
-                }
-                else if( error.code == NSFileReadNoSuchFileError )
-                {
-                    error = nil;
-                    
-                    [ [ NSFileManager defaultManager ] createDirectoryAtURL: self.applicationDocumentsDirectory withIntermediateDirectories: YES attributes: nil error: &error ];
-                }
-            }
-            
-            if( failure == NO && error == nil )
-            {
-                {
-                    NSURL * url;
-                    
-                    self.persistentStoreCoordinatorInstance = [ [ NSPersistentStoreCoordinator alloc ] initWithManagedObjectModel: self.managedObjectModel ];
-                    url                                     = [ self.applicationDocumentsDirectory URLByAppendingPathComponent: @"OSXCoreDataObjC.storedata" ];
-                    
-                    if( [ self.persistentStoreCoordinatorInstance addPersistentStoreWithType: NSXMLStoreType configuration: nil URL: url options: nil error: &error ] == NO )
-                    {
-                        self.persistentStoreCoordinatorInstance = nil;
-                    }
-                }
-            }
-            
-            if( failure || error )
-            {
-                errorInfo                                    = [ NSMutableDictionary dictionary ];
-                errorInfo[ NSLocalizedDescriptionKey]        = @"Failed to initialize the application's saved data.";
-                errorInfo[ NSLocalizedFailureReasonErrorKey] = errorMessage;
-                
-                if( error )
-                {
-                    errorInfo[ NSUnderlyingErrorKey ] = error;
-                }
-                
-                [ NSApp presentError: [ NSError errorWithDomain: identifier code: 9999 userInfo: errorInfo ] ];
-            }
-        }
-        
-        return self.persistentStoreCoordinatorInstance;
-    }
-}
-
 #pragma mark - Core Data Saving and Undo support
 
 - ( IBAction )saveAction: ( id )sender
@@ -194,12 +75,12 @@
     
     ( void )sender;
     
-    if( [ self.managedObjectContext commitEditing ] == NO )
+    if( [ self.data.context commitEditing ] == NO )
     {
         NSLog( @"%@:%@ - Unable to commit editing before saving", self.class, NSStringFromSelector( _cmd ) );
     }
     
-    if( self.managedObjectContext.hasChanges && [ self.managedObjectContext save: &error ] )
+    if( self.data.context.hasChanges && [ self.data.context save: &error ] )
     {
         [ [ NSApplication sharedApplication ] presentError: error ];
     }
@@ -209,7 +90,7 @@
 {
     ( void )window;
     
-    return self.managedObjectContext.undoManager;
+    return self.data.context.undoManager;
 }
 
 - ( NSApplicationTerminateReply )applicationShouldTerminate: ( NSApplication * )sender
@@ -217,24 +98,24 @@
     NSError * error;
     NSAlert * alert;
     
-    if( self.managedObjectContext == nil )
+    if( self.data.context == nil )
     {
         return NSTerminateNow;
     }
     
-    if( [ self.managedObjectContext commitEditing ] == NO )
+    if( [ self.data.context commitEditing ] == NO )
     {
         NSLog( @"%@:%@ - Unable to commit editing to terminate", self.class, NSStringFromSelector( _cmd ) );
         
         return NSTerminateCancel;
     }
     
-    if( self.managedObjectContext.hasChanges == NO )
+    if( self.data.context.hasChanges == NO )
     {
         return NSTerminateNow;
     }
     
-    if( [ self.managedObjectContext save: &error ] == NO )
+    if( [ self.data.context save: &error ] == NO )
     {     
         if( [ sender presentError: error ] )
         {

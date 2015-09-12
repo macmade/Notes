@@ -24,15 +24,15 @@
 
 @import Cocoa;
 
-@class CoreDataModel;
-@class MainWindowController;
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ApplicationDelegate: NSObject < NSApplicationDelegate >
+@interface CoreDataModel: NSObject
 
-@property( atomic, readonly ) CoreDataModel        * data;
-@property( atomic, readonly ) MainWindowController * mainWindowController;
+@property( atomic, readonly ) NSManagedObjectModel         * model;
+@property( atomic, readonly ) NSPersistentStoreCoordinator * store;
+@property( atomic, readonly ) NSManagedObjectContext       * context;
+
+- ( nullable instancetype )initWithModelName: ( NSString * )name storeType: ( NSString * )type NS_DESIGNATED_INITIALIZER;
 
 @end
 

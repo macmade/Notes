@@ -14,6 +14,7 @@
 		0588A9B61BA34C8400131163 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9B11BA34C8400131163 /* MainMenu.xib */; };
 		0588A9B91BA358B200131163 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9B81BA358B200131163 /* MainWindowController.m */; };
 		0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9BA1BA3590F00131163 /* MainWindowController.xib */; };
+		0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9C11BA3660500131163 /* CoreDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		0588A9B71BA358B200131163 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		0588A9B81BA358B200131163 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		0588A9BB1BA3590F00131163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindowController.xib; sourceTree = "<group>"; };
+		0588A9C01BA3660500131163 /* CoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
+		0588A9C11BA3660500131163 /* CoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */,
 				0588A9B71BA358B200131163 /* MainWindowController.h */,
 				0588A9B81BA358B200131163 /* MainWindowController.m */,
+				0588A9C01BA3660500131163 /* CoreDataModel.h */,
+				0588A9C11BA3660500131163 /* CoreDataModel.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */,
 				0588A9B91BA358B200131163 /* MainWindowController.m in Sources */,
 				0588A99A1BA3492800131163 /* main.m in Sources */,
+				0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
