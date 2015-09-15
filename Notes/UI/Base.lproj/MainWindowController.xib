@@ -216,11 +216,19 @@
                                                     <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="STM-NP-pKI">
                                                         <rect key="frame" x="55" y="6" width="550" height="22"/>
                                                         <animations/>
-                                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Mif-OX-e5c">
+                                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" id="Mif-OX-e5c">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </searchFieldCell>
+                                                        <connections>
+                                                            <binding destination="65l-ny-Fyh" name="predicate" keyPath="filterPredicate" id="AQd-QH-Yck">
+                                                                <dictionary key="options">
+                                                                    <string key="NSDisplayName">predicate</string>
+                                                                    <string key="NSPredicateFormat">title.lowercaseString contains ($value).lowercaseString or content.string.lowercaseString contains ($value).lowercaseString</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
                                                     </searchField>
                                                 </subviews>
                                                 <constraints>
@@ -243,7 +251,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="610" height="127"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="40" rowSizeStyle="automatic" headerView="TVR-If-rJv" viewBased="YES" id="W0g-gZ-DiQ">
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnSelection="YES" autosaveColumns="NO" rowHeight="40" rowSizeStyle="automatic" headerView="TVR-If-rJv" viewBased="YES" id="W0g-gZ-DiQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="610" height="104"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <animations/>
@@ -251,7 +259,7 @@
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="400.37890625" minWidth="40" maxWidth="1000" id="hAY-ZW-MxH">
+                                                                <tableColumn width="400.5" minWidth="40" maxWidth="1000" id="hAY-ZW-MxH">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Title">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -289,7 +297,7 @@
                                                                                         <binding destination="f2K-TW-eaC" name="value" keyPath="objectValue.title" id="zxE-MF-so1"/>
                                                                                     </connections>
                                                                                 </textField>
-                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-V1-gUs">
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-V1-gUs">
                                                                                     <rect key="frame" x="1" y="3" width="399" height="17"/>
                                                                                     <animations/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="JOX-6r-60P">
@@ -303,12 +311,15 @@
                                                                                 </textField>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="leading" secondItem="f2K-TW-eaC" secondAttribute="leading" id="70c-M8-JJV"/>
-                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="top" secondItem="maD-gI-Zyp" secondAttribute="top" id="9Z8-fP-A6d"/>
-                                                                                <constraint firstItem="maD-gI-Zyp" firstAttribute="leading" secondItem="VW3-lQ-HIs" secondAttribute="trailing" constant="8" symbolic="YES" id="AbA-c4-UhD"/>
-                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="centerY" secondItem="f2K-TW-eaC" secondAttribute="centerY" constant="-11.5" id="T1L-Qj-5ei"/>
-                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="bottom" secondItem="maD-gI-Zyp" secondAttribute="bottom" id="eKa-7O-WCE"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="maD-gI-Zyp" secondAttribute="trailing" constant="3" id="kRm-Ac-g3t"/>
+                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="top" secondItem="maD-gI-Zyp" secondAttribute="top" id="2Id-nd-svi"/>
+                                                                                <constraint firstItem="DGA-V1-gUs" firstAttribute="leading" secondItem="f2K-TW-eaC" secondAttribute="leading" constant="3" id="2aq-4M-1X9"/>
+                                                                                <constraint firstItem="maD-gI-Zyp" firstAttribute="leading" secondItem="VW3-lQ-HIs" secondAttribute="trailing" constant="8" symbolic="YES" id="5DI-8N-0Vm"/>
+                                                                                <constraint firstItem="DGA-V1-gUs" firstAttribute="top" secondItem="VW3-lQ-HIs" secondAttribute="bottom" constant="3" id="QhI-qr-CP7"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="DGA-V1-gUs" secondAttribute="trailing" constant="3" id="YWp-VC-29V"/>
+                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="bottom" secondItem="maD-gI-Zyp" secondAttribute="bottom" id="i53-CP-0ev"/>
+                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="leading" secondItem="f2K-TW-eaC" secondAttribute="leading" id="uT2-cQ-2nB"/>
+                                                                                <constraint firstItem="VW3-lQ-HIs" firstAttribute="top" secondItem="f2K-TW-eaC" secondAttribute="top" id="x99-sV-Qay"/>
+                                                                                <constraint firstItem="DGA-V1-gUs" firstAttribute="trailing" secondItem="maD-gI-Zyp" secondAttribute="trailing" id="yNR-ag-YqP"/>
                                                                             </constraints>
                                                                             <animations/>
                                                                             <connections>
