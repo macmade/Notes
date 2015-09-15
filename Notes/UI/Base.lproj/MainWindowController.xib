@@ -370,29 +370,6 @@
                 </constraints>
                 <animations/>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="BBC8D5BD-7509-4AD4-8478-97DC3772246D" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="labelOnly" sizeMode="regular" id="ecU-bq-kiA">
-                <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="r8d-MD-orB"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="Frg-1I-3P6"/>
-                    <toolbarItem implicitItemIdentifier="439530B4-6540-4BB1-B683-2D879F08AD53" label="New Note" paletteLabel="New Note" tag="-1" id="Exa-rr-Vis">
-                        <connections>
-                            <action selector="add:" target="65l-ny-Fyh" id="cC4-Uk-x6E"/>
-                        </connections>
-                    </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="02B5BD48-E0C9-4D57-AAA3-B96C63724F8A" label="Delete Note" paletteLabel="Delete Note" tag="-1" id="rQQ-qm-1q4">
-                        <connections>
-                            <action selector="remove:" target="65l-ny-Fyh" id="UkG-rv-BZ2"/>
-                        </connections>
-                    </toolbarItem>
-                </allowedToolbarItems>
-                <defaultToolbarItems>
-                    <toolbarItem reference="Frg-1I-3P6"/>
-                    <toolbarItem reference="Exa-rr-Vis"/>
-                    <toolbarItem reference="r8d-MD-orB"/>
-                    <toolbarItem reference="rQQ-qm-1q4"/>
-                    <toolbarItem reference="Frg-1I-3P6"/>
-                </defaultToolbarItems>
-            </toolbar>
         </window>
         <arrayController mode="entity" entityName="Group" automaticallyPreparesContent="YES" id="08P-02-BH0" userLabel="Groups">
             <connections>
