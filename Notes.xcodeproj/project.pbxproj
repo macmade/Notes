@@ -15,7 +15,6 @@
 		0588A9B91BA358B200131163 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9B81BA358B200131163 /* MainWindowController.m */; };
 		0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9BA1BA3590F00131163 /* MainWindowController.xib */; };
 		0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9C11BA3660500131163 /* CoreDataModel.m */; };
-		0588A9D71BA4527100131163 /* SetArrayValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9D61BA4527100131163 /* SetArrayValueTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +31,6 @@
 		0588A9BB1BA3590F00131163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindowController.xib; sourceTree = "<group>"; };
 		0588A9C01BA3660500131163 /* CoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
 		0588A9C11BA3660500131163 /* CoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataModel.m; sourceTree = "<group>"; };
-		0588A9D51BA4527100131163 /* SetArrayValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetArrayValueTransformer.h; sourceTree = "<group>"; };
-		0588A9D61BA4527100131163 /* SetArrayValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetArrayValueTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +89,6 @@
 				0588A9B81BA358B200131163 /* MainWindowController.m */,
 				0588A9C01BA3660500131163 /* CoreDataModel.h */,
 				0588A9C11BA3660500131163 /* CoreDataModel.m */,
-				0588A9D51BA4527100131163 /* SetArrayValueTransformer.h */,
-				0588A9D61BA4527100131163 /* SetArrayValueTransformer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -188,7 +183,6 @@
 			files = (
 				0588A9B31BA34C8400131163 /* ApplicationDelegate.m in Sources */,
 				0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */,
-				0588A9D71BA4527100131163 /* SetArrayValueTransformer.m in Sources */,
 				0588A9B91BA358B200131163 /* MainWindowController.m in Sources */,
 				0588A99A1BA3492800131163 /* main.m in Sources */,
 				0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */,
