@@ -432,7 +432,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="610" height="389"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="jxN-zA-Evw">
+                                                        <textView findStyle="panel" allowsUndo="YES" allowsImageEditing="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" smartInsertDelete="YES" id="jxN-zA-Evw">
                                                             <rect key="frame" x="0.0" y="0.0" width="610" height="389"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <animations/>
