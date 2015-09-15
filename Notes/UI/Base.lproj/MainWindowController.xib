@@ -134,7 +134,7 @@
                                             <animations/>
                                         </tableHeaderView>
                                     </scrollView>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r9M-Jd-hDS">
+                                    <button toolTip="Add new folder" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r9M-Jd-hDS">
                                         <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="sa3-lq-geU"/>
@@ -148,7 +148,7 @@
                                             <action selector="add:" target="08P-02-BH0" id="o5U-zB-cgt"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="53A-r3-YnQ">
+                                    <button toolTip="Remove selected folder" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="53A-r3-YnQ">
                                         <rect key="frame" x="21" y="0.0" width="21" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="ydI-BC-Ahi"/>
@@ -188,7 +188,7 @@
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="OPy-Hm-Ik7">
                                                 <rect key="frame" x="0.0" y="127" width="610" height="33"/>
                                                 <subviews>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-uM-vh8">
+                                                    <button toolTip="Add new note" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-uM-vh8">
                                                         <rect key="frame" x="5" y="5" width="21" height="21"/>
                                                         <animations/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="vHh-4r-ub4">
@@ -199,7 +199,7 @@
                                                             <action selector="add:" target="65l-ny-Fyh" id="VHP-CW-vfi"/>
                                                         </connections>
                                                     </button>
-                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RVv-Nc-eTB">
+                                                    <button toolTip="Remove selected note" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RVv-Nc-eTB">
                                                         <rect key="frame" x="26" y="5" width="21" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="21" id="zeo-EO-O04"/>
