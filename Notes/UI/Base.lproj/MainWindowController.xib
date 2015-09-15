@@ -280,7 +280,7 @@ CA
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView id="f2K-TW-eaC">
-                                                                            <rect key="frame" x="1" y="1" width="400.5" height="40"/>
+                                                                            <rect key="frame" x="1" y="1" width="401" height="40"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-lQ-HIs">
@@ -352,7 +352,7 @@ CA
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView id="l4h-1A-b1R">
-                                                                            <rect key="frame" x="404.5" y="1" width="203.5" height="40"/>
+                                                                            <rect key="frame" x="404.5" y="1" width="204" height="40"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="W0o-QD-Y7m">
@@ -449,7 +449,7 @@ CA
                                                     <rect key="frame" x="0.0" y="0.0" width="610" height="389"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textView findStyle="panel" allowsUndo="YES" allowsImageEditing="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" smartInsertDelete="YES" id="jxN-zA-Evw">
+                                                        <textView findStyle="bar" allowsUndo="YES" allowsImageEditing="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" textReplacement="YES" smartInsertDelete="YES" id="jxN-zA-Evw">
                                                             <rect key="frame" x="0.0" y="0.0" width="610" height="389"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <animations/>
