@@ -194,6 +194,8 @@
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="vHh-4r-ub4">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
+                                                            <string key="keyEquivalent">n</string>
+                                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="add:" target="65l-ny-Fyh" id="VHP-CW-vfi"/>
@@ -208,6 +210,10 @@
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="2kr-gy-U9i">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
+                                                            <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
+                                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="remove:" target="65l-ny-Fyh" id="xAv-9D-rR9"/>
