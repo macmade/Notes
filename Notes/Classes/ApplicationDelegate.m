@@ -50,7 +50,6 @@
         self.data                 = data;
         self.mainWindowController = [ MainWindowController new ];
         
-        [ self.mainWindowController.window center ];
         [ self.mainWindowController showWindow: nil ];
     }
 }
