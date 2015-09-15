@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054485CE1BA8AF14008FF0E0 /* Notes.icns in Resources */ = {isa = PBXBuildFile; fileRef = 054485CD1BA8AF14008FF0E0 /* Notes.icns */; };
 		0588A99A1BA3492800131163 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9991BA3492800131163 /* main.m */; };
 		0588A9B31BA34C8400131163 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */; };
 		0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AD1BA34C8400131163 /* Notes.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054485CD1BA8AF14008FF0E0 /* Notes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Notes.icns; sourceTree = "<group>"; };
 		0588A9921BA3492800131163 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0588A9991BA3492800131163 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0588A9A31BA3492800131163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				0588A9B01BA34C8400131163 /* Assets.xcassets */,
 				0588A9B11BA34C8400131163 /* MainMenu.xib */,
 				0588A9BA1BA3590F00131163 /* MainWindowController.xib */,
+				054485CD1BA8AF14008FF0E0 /* Notes.icns */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				0588A9B51BA34C8400131163 /* Assets.xcassets in Resources */,
 				0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */,
+				054485CE1BA8AF14008FF0E0 /* Notes.icns in Resources */,
 				0588A9B61BA34C8400131163 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
