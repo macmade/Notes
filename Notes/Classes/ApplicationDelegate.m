@@ -25,13 +25,16 @@
 #import "ApplicationDelegate.h"
 #import "CoreDataModel.h"
 #import "MainWindowController.h"
+#import "AboutWindowController.h"
 
 @interface ApplicationDelegate()
 
-@property( atomic, readwrite, strong ) CoreDataModel        * data;
-@property( atomic, readwrite, strong ) MainWindowController * mainWindowController;
+@property( atomic, readwrite, strong ) CoreDataModel         * data;
+@property( atomic, readwrite, strong ) MainWindowController  * mainWindowController;
+@property( atomic, readwrite, strong ) AboutWindowController * aboutWindowController;
 
 - ( IBAction )saveDocument: ( id )sender;
+- ( IBAction )showAboutWindow: ( id )sender;
 
 @end
 
@@ -136,6 +139,17 @@
     }
     
     return NSTerminateNow;
+}
+
+- ( IBAction )showAboutWindow: ( id )sender
+{
+    if( self.aboutWindowController == nil )
+    {
+        self.aboutWindowController = [ AboutWindowController new ];
+    }
+    
+    [ self.aboutWindowController.window center ];
+    [ self.aboutWindowController showWindow: sender ];
 }
 
 @end

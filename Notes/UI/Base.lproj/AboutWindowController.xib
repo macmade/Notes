@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9046" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9046"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutWindowController">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="6iO-Xt-yNY"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="296" height="402"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="296" height="402"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="YKP-be-TTA">
+                        <rect key="frame" x="0.0" y="0.0" width="296" height="402"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSw-9t-6b6">
+                                <rect key="frame" x="20" y="45" width="256" height="256"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Notes" id="Hnh-3o-NW3"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFr-dF-oyR">
+                                <rect key="frame" x="18" y="334" width="260" height="48"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="gz9-x2-Yqm">
+                                    <font key="font" metaFont="systemUltraLight" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="name" id="33a-J3-o3D"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eu-OD-nhB">
+                                <rect key="frame" x="18" y="309" width="260" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="QV7-R1-KQZ">
+                                    <font key="font" metaFont="systemUltraLight" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="version" id="Mey-xX-N8A"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRF-mc-huL">
+                                <rect key="frame" x="18" y="20" width="260" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="9kr-Wn-nBH">
+                                    <font key="font" metaFont="systemUltraLight" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="copyright" id="wFq-PN-MfE"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                    </visualEffectView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YKP-be-TTA" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="8Hs-Jc-Zmv"/>
+                    <constraint firstItem="YKP-be-TTA" firstAttribute="height" secondItem="EiT-Mj-1SZ" secondAttribute="height" id="eMU-Jb-HsH"/>
+                    <constraint firstItem="YKP-be-TTA" firstAttribute="centerY" secondItem="EiT-Mj-1SZ" secondAttribute="centerY" id="fqg-Yt-dxy"/>
+                    <constraint firstItem="YKP-be-TTA" firstAttribute="width" secondItem="EiT-Mj-1SZ" secondAttribute="width" id="hV0-zh-quo"/>
+                </constraints>
+                <animations/>
+            </view>
+            <point key="canvasLocation" x="363" y="400"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="mtk-HT-I5T"/>
+    </objects>
+    <resources>
+        <image name="Notes" width="512" height="512"/>
+    </resources>
+</document>

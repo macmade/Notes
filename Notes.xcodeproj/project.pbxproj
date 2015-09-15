@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		054485CE1BA8AF14008FF0E0 /* Notes.icns in Resources */ = {isa = PBXBuildFile; fileRef = 054485CD1BA8AF14008FF0E0 /* Notes.icns */; };
+		054485D11BA8C851008FF0E0 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054485D01BA8C851008FF0E0 /* AboutWindowController.m */; };
+		054485D41BA8C8CD008FF0E0 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 054485D21BA8C8CD008FF0E0 /* AboutWindowController.xib */; };
 		0588A99A1BA3492800131163 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9991BA3492800131163 /* main.m */; };
 		0588A9B31BA34C8400131163 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */; };
 		0588A9B41BA34C8400131163 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9AD1BA34C8400131163 /* Notes.xcdatamodeld */; };
@@ -20,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		054485CD1BA8AF14008FF0E0 /* Notes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Notes.icns; sourceTree = "<group>"; };
+		054485CF1BA8C851008FF0E0 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
+		054485D01BA8C851008FF0E0 /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
+		054485D31BA8C8CD008FF0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindowController.xib; sourceTree = "<group>"; };
 		0588A9921BA3492800131163 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0588A9991BA3492800131163 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0588A9A31BA3492800131163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,12 +90,14 @@
 		0588A9A91BA34C8400131163 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				054485CF1BA8C851008FF0E0 /* AboutWindowController.h */,
+				054485D01BA8C851008FF0E0 /* AboutWindowController.m */,
 				0588A9AA1BA34C8400131163 /* ApplicationDelegate.h */,
 				0588A9AB1BA34C8400131163 /* ApplicationDelegate.m */,
-				0588A9B71BA358B200131163 /* MainWindowController.h */,
-				0588A9B81BA358B200131163 /* MainWindowController.m */,
 				0588A9C01BA3660500131163 /* CoreDataModel.h */,
 				0588A9C11BA3660500131163 /* CoreDataModel.m */,
+				0588A9B71BA358B200131163 /* MainWindowController.h */,
+				0588A9B81BA358B200131163 /* MainWindowController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -109,6 +116,7 @@
 				0588A9B01BA34C8400131163 /* Assets.xcassets */,
 				0588A9B11BA34C8400131163 /* MainMenu.xib */,
 				0588A9BA1BA3590F00131163 /* MainWindowController.xib */,
+				054485D21BA8C8CD008FF0E0 /* AboutWindowController.xib */,
 				054485CD1BA8AF14008FF0E0 /* Notes.icns */,
 			);
 			path = UI;
@@ -174,6 +182,7 @@
 				0588A9B51BA34C8400131163 /* Assets.xcassets in Resources */,
 				0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */,
 				054485CE1BA8AF14008FF0E0 /* Notes.icns in Resources */,
+				054485D41BA8C8CD008FF0E0 /* AboutWindowController.xib in Resources */,
 				0588A9B61BA34C8400131163 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,12 +199,21 @@
 				0588A9B91BA358B200131163 /* MainWindowController.m in Sources */,
 				0588A99A1BA3492800131163 /* main.m in Sources */,
 				0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */,
+				054485D11BA8C851008FF0E0 /* AboutWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		054485D21BA8C8CD008FF0E0 /* AboutWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				054485D31BA8C8CD008FF0E0 /* Base */,
+			);
+			name = AboutWindowController.xib;
+			sourceTree = "<group>";
+		};
 		0588A9B11BA34C8400131163 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
