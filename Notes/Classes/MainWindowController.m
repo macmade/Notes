@@ -42,6 +42,9 @@
 {
     [ super windowDidLoad ];
     
+    self.window.titlebarAppearsTransparent = true;
+    self.window.titleVisibility            = NSWindowTitleHidden;
+    
     self.groupsArrayController.sortDescriptors = @[ [ NSSortDescriptor sortDescriptorWithKey: @"name"  ascending: YES ] ];
     self.notesArrayController.sortDescriptors  = @[ [ NSSortDescriptor sortDescriptorWithKey: @"title" ascending: YES ] ];
 }

@@ -14,7 +14,7 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Notes" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="800" height="600"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
@@ -31,13 +31,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neB-rZ-9qi">
-                                        <rect key="frame" x="0.0" y="21" width="180" height="579"/>
+                                        <rect key="frame" x="0.0" y="21" width="180" height="549"/>
                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="hG4-po-YlQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="579"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="549"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" headerView="lfm-Bb-3QS" viewBased="YES" id="83m-81-56h">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
+                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" id="83m-81-56h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <animations/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -126,11 +126,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </scroller>
-                                        <tableHeaderView key="headerView" id="lfm-Bb-3QS">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="23"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableHeaderView>
                                     </scrollView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r9M-Jd-hDS">
                                         <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
@@ -164,7 +159,7 @@
                                 <constraints>
                                     <constraint firstItem="53A-r3-YnQ" firstAttribute="bottom" secondItem="r9M-Jd-hDS" secondAttribute="bottom" id="C9e-Ot-BOB"/>
                                     <constraint firstItem="53A-r3-YnQ" firstAttribute="top" secondItem="r9M-Jd-hDS" secondAttribute="top" id="D6p-Ai-qvz"/>
-                                    <constraint firstItem="neB-rZ-9qi" firstAttribute="top" secondItem="zwe-Rw-Ekj" secondAttribute="top" id="DNV-ne-DJH"/>
+                                    <constraint firstItem="neB-rZ-9qi" firstAttribute="top" secondItem="zwe-Rw-Ekj" secondAttribute="top" constant="30" id="DNV-ne-DJH"/>
                                     <constraint firstAttribute="bottom" secondItem="r9M-Jd-hDS" secondAttribute="bottom" id="E3J-Cg-GbJ"/>
                                     <constraint firstItem="r9M-Jd-hDS" firstAttribute="leading" secondItem="neB-rZ-9qi" secondAttribute="leading" id="Ear-dP-1vY"/>
                                     <constraint firstItem="r9M-Jd-hDS" firstAttribute="top" secondItem="neB-rZ-9qi" secondAttribute="bottom" id="JbD-ND-mke"/>
