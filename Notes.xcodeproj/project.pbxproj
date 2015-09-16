@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052DC2F91BA9FB7D00B0235F /* NumberStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 052DC2F81BA9FB7D00B0235F /* NumberStringValueTransformer.m */; };
 		054485CE1BA8AF14008FF0E0 /* Notes.icns in Resources */ = {isa = PBXBuildFile; fileRef = 054485CD1BA8AF14008FF0E0 /* Notes.icns */; };
 		054485D11BA8C851008FF0E0 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 054485D01BA8C851008FF0E0 /* AboutWindowController.m */; };
 		054485D41BA8C8CD008FF0E0 /* AboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 054485D21BA8C8CD008FF0E0 /* AboutWindowController.xib */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052DC2F71BA9FB7D00B0235F /* NumberStringValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberStringValueTransformer.h; sourceTree = "<group>"; };
+		052DC2F81BA9FB7D00B0235F /* NumberStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberStringValueTransformer.m; sourceTree = "<group>"; };
 		054485CD1BA8AF14008FF0E0 /* Notes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Notes.icns; sourceTree = "<group>"; };
 		054485CF1BA8C851008FF0E0 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
 		054485D01BA8C851008FF0E0 /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				0588A9C11BA3660500131163 /* CoreDataModel.m */,
 				0588A9B71BA358B200131163 /* MainWindowController.h */,
 				0588A9B81BA358B200131163 /* MainWindowController.m */,
+				052DC2F71BA9FB7D00B0235F /* NumberStringValueTransformer.h */,
+				052DC2F81BA9FB7D00B0235F /* NumberStringValueTransformer.m */,
 				05B3885C1BA9663100A727CD /* Model */,
 			);
 			path = Classes;
@@ -232,6 +237,7 @@
 				05B388651BA9663100A727CD /* Group+CoreDataProperties.m in Sources */,
 				05B388661BA9663100A727CD /* Group.m in Sources */,
 				05B388671BA9663100A727CD /* Note+CoreDataProperties.m in Sources */,
+				052DC2F91BA9FB7D00B0235F /* NumberStringValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
