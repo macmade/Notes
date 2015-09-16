@@ -176,6 +176,7 @@
                                         </buttonCell>
                                         <connections>
                                             <action selector="remove:" target="08P-02-BH0" id="3Uc-6R-8Ec"/>
+                                            <binding destination="08P-02-BH0" name="enabled" keyPath="selection.@count" id="mwe-xm-vIv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -215,6 +216,7 @@
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="add:" target="65l-ny-Fyh" id="VHP-CW-vfi"/>
+                                                            <binding destination="08P-02-BH0" name="enabled" keyPath="selection.@count" id="ciO-dI-9xj"/>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Remove selected note" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RVv-Nc-eTB">
@@ -233,6 +235,7 @@ CA
                                                         </buttonCell>
                                                         <connections>
                                                             <action selector="remove:" target="65l-ny-Fyh" id="xAv-9D-rR9"/>
+                                                            <binding destination="65l-ny-Fyh" name="enabled" keyPath="selection.@count" id="zbe-GI-Y89"/>
                                                         </connections>
                                                     </button>
                                                     <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="STM-NP-pKI">
