@@ -28,7 +28,7 @@
                     <splitView arrangesAllSubviews="NO" autosaveName="GroupSplitView" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jbp-Bj-9Ba">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" state="followsWindowActiveState" id="zwe-Rw-Ekj">
+                            <visualEffectView autoresizesSubviews="NO" appearanceType="vibrantLight" blendingMode="behindWindow" state="followsWindowActiveState" id="zwe-Rw-Ekj">
                                 <rect key="frame" x="0.0" y="0.0" width="180" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -185,7 +185,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="610" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="OPy-Hm-Ik7">
+                                            <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="slN-cv-5hO">
                                                 <rect key="frame" x="0.0" y="127" width="610" height="33"/>
                                                 <subviews>
                                                     <button toolTip="Add new note" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-uM-vh8">
@@ -238,19 +238,19 @@ CA
                                                     </searchField>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="leading" secondItem="iPK-uM-vh8" secondAttribute="trailing" id="3vM-KA-rKL"/>
-                                                    <constraint firstAttribute="trailing" secondItem="STM-NP-pKI" secondAttribute="trailing" constant="5" id="6er-j5-Qca"/>
-                                                    <constraint firstItem="STM-NP-pKI" firstAttribute="centerY" secondItem="OPy-Hm-Ik7" secondAttribute="centerY" id="CrW-NA-jMW"/>
-                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="baseline" secondItem="iPK-uM-vh8" secondAttribute="baseline" id="KJw-Cy-Og6"/>
-                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="top" secondItem="OPy-Hm-Ik7" secondAttribute="top" constant="7" id="U7Z-cM-3ZK"/>
-                                                    <constraint firstItem="iPK-uM-vh8" firstAttribute="leading" secondItem="OPy-Hm-Ik7" secondAttribute="leading" constant="5" id="V7s-h2-iuC"/>
-                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="leading" secondItem="OPy-Hm-Ik7" secondAttribute="leading" constant="26" id="ap1-1N-2ky"/>
-                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="firstBaseline" secondItem="iPK-uM-vh8" secondAttribute="firstBaseline" id="cMw-jD-nAO"/>
-                                                    <constraint firstAttribute="bottom" secondItem="RVv-Nc-eTB" secondAttribute="bottom" constant="5" id="kHa-U2-cXr"/>
-                                                    <constraint firstItem="STM-NP-pKI" firstAttribute="leading" secondItem="RVv-Nc-eTB" secondAttribute="trailing" constant="8" symbolic="YES" id="ph7-UR-Mcj"/>
+                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="firstBaseline" secondItem="iPK-uM-vh8" secondAttribute="firstBaseline" id="9Yl-H6-fLh"/>
+                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="leading" secondItem="iPK-uM-vh8" secondAttribute="leading" constant="21" id="9rb-iU-3Qo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="STM-NP-pKI" secondAttribute="trailing" constant="5" id="BNA-8A-09b"/>
+                                                    <constraint firstItem="iPK-uM-vh8" firstAttribute="leading" secondItem="slN-cv-5hO" secondAttribute="leading" constant="5" id="Dt1-oj-NoH"/>
+                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="leading" secondItem="iPK-uM-vh8" secondAttribute="trailing" id="Myq-gb-M55"/>
+                                                    <constraint firstItem="STM-NP-pKI" firstAttribute="centerY" secondItem="slN-cv-5hO" secondAttribute="centerY" id="RxH-AI-1gF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iPK-uM-vh8" secondAttribute="bottom" constant="5" id="Zaw-mb-0oC"/>
+                                                    <constraint firstItem="STM-NP-pKI" firstAttribute="leading" secondItem="RVv-Nc-eTB" secondAttribute="leading" constant="29" id="awZ-Sz-sMZ"/>
+                                                    <constraint firstItem="RVv-Nc-eTB" firstAttribute="baseline" secondItem="iPK-uM-vh8" secondAttribute="baseline" id="mTU-HU-FAw"/>
+                                                    <constraint firstItem="iPK-uM-vh8" firstAttribute="top" secondItem="slN-cv-5hO" secondAttribute="top" constant="7" id="qiQ-LQ-bO1"/>
                                                 </constraints>
                                                 <animations/>
-                                            </customView>
+                                            </visualEffectView>
                                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM8-90-6lh">
                                                 <rect key="frame" x="0.0" y="0.0" width="610" height="127"/>
                                                 <clipView key="contentView" id="ASS-Ds-3VZ">
@@ -414,12 +414,12 @@ CA
                                             </scrollView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="OPy-Hm-Ik7" firstAttribute="top" secondItem="bhX-VV-yLH" secondAttribute="top" id="COX-8H-2xo"/>
-                                            <constraint firstItem="EM8-90-6lh" firstAttribute="top" secondItem="OPy-Hm-Ik7" secondAttribute="bottom" id="LQV-sh-36g"/>
-                                            <constraint firstItem="EM8-90-6lh" firstAttribute="leading" secondItem="OPy-Hm-Ik7" secondAttribute="leading" id="UKt-e9-w0Z"/>
+                                            <constraint firstItem="slN-cv-5hO" firstAttribute="top" secondItem="bhX-VV-yLH" secondAttribute="top" id="I3Z-lc-9aV"/>
+                                            <constraint firstItem="slN-cv-5hO" firstAttribute="trailing" secondItem="EM8-90-6lh" secondAttribute="trailing" id="fXO-Si-Nji"/>
                                             <constraint firstItem="EM8-90-6lh" firstAttribute="leading" secondItem="bhX-VV-yLH" secondAttribute="leading" id="hde-oW-7dn"/>
+                                            <constraint firstItem="slN-cv-5hO" firstAttribute="leading" secondItem="EM8-90-6lh" secondAttribute="leading" id="nxP-bm-s7B"/>
+                                            <constraint firstItem="EM8-90-6lh" firstAttribute="top" secondItem="slN-cv-5hO" secondAttribute="bottom" id="orP-uP-idc"/>
                                             <constraint firstItem="EM8-90-6lh" firstAttribute="top" secondItem="bhX-VV-yLH" secondAttribute="top" constant="33" id="p44-Dm-EXA"/>
-                                            <constraint firstItem="EM8-90-6lh" firstAttribute="trailing" secondItem="OPy-Hm-Ik7" secondAttribute="trailing" id="sFy-uf-0K5"/>
                                             <constraint firstAttribute="bottom" secondItem="EM8-90-6lh" secondAttribute="bottom" id="tb2-XV-cI3"/>
                                         </constraints>
                                         <animations/>
