@@ -299,7 +299,7 @@ CA
                                                                             <rect key="frame" x="1" y="1" width="401" height="40"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-lQ-HIs">
+                                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-lQ-HIs">
                                                                                     <rect key="frame" x="0.0" y="23" width="17" height="17"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="17" id="3dL-I7-Zv8"/>
@@ -307,7 +307,7 @@ CA
                                                                                     <animations/>
                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Note" id="K1e-EB-YbS"/>
                                                                                 </imageView>
-                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maD-gI-Zyp">
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="maD-gI-Zyp">
                                                                                     <rect key="frame" x="23" y="23" width="377" height="17"/>
                                                                                     <animations/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="83w-JQ-6hi">
@@ -319,7 +319,7 @@ CA
                                                                                         <binding destination="f2K-TW-eaC" name="value" keyPath="objectValue.title" id="zxE-MF-so1"/>
                                                                                     </connections>
                                                                                 </textField>
-                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-V1-gUs">
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-V1-gUs">
                                                                                     <rect key="frame" x="1" y="3" width="399" height="17"/>
                                                                                     <animations/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="JOX-6r-60P">
