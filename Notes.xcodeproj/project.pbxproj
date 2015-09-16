@@ -18,6 +18,10 @@
 		0588A9B91BA358B200131163 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9B81BA358B200131163 /* MainWindowController.m */; };
 		0588A9BC1BA3590F00131163 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0588A9BA1BA3590F00131163 /* MainWindowController.xib */; };
 		0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0588A9C11BA3660500131163 /* CoreDataModel.m */; };
+		05B388651BA9663100A727CD /* Group+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B3885E1BA9663100A727CD /* Group+CoreDataProperties.m */; };
+		05B388661BA9663100A727CD /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B388601BA9663100A727CD /* Group.m */; };
+		05B388671BA9663100A727CD /* Note+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B388621BA9663100A727CD /* Note+CoreDataProperties.m */; };
+		05B388681BA9663100A727CD /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B388641BA9663100A727CD /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,14 @@
 		0588A9BB1BA3590F00131163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindowController.xib; sourceTree = "<group>"; };
 		0588A9C01BA3660500131163 /* CoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
 		0588A9C11BA3660500131163 /* CoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataModel.m; sourceTree = "<group>"; };
+		05B3885D1BA9663100A727CD /* Group+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Group+CoreDataProperties.h"; sourceTree = "<group>"; };
+		05B3885E1BA9663100A727CD /* Group+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Group+CoreDataProperties.m"; sourceTree = "<group>"; };
+		05B3885F1BA9663100A727CD /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		05B388601BA9663100A727CD /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		05B388611BA9663100A727CD /* Note+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Note+CoreDataProperties.h"; sourceTree = "<group>"; };
+		05B388621BA9663100A727CD /* Note+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Note+CoreDataProperties.m"; sourceTree = "<group>"; };
+		05B388631BA9663100A727CD /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		05B388641BA9663100A727CD /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,7 @@
 				0588A9C11BA3660500131163 /* CoreDataModel.m */,
 				0588A9B71BA358B200131163 /* MainWindowController.h */,
 				0588A9B81BA358B200131163 /* MainWindowController.m */,
+				05B3885C1BA9663100A727CD /* Model */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -120,6 +133,21 @@
 				054485CD1BA8AF14008FF0E0 /* Notes.icns */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		05B3885C1BA9663100A727CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05B3885D1BA9663100A727CD /* Group+CoreDataProperties.h */,
+				05B3885E1BA9663100A727CD /* Group+CoreDataProperties.m */,
+				05B3885F1BA9663100A727CD /* Group.h */,
+				05B388601BA9663100A727CD /* Group.m */,
+				05B388611BA9663100A727CD /* Note+CoreDataProperties.h */,
+				05B388621BA9663100A727CD /* Note+CoreDataProperties.m */,
+				05B388631BA9663100A727CD /* Note.h */,
+				05B388641BA9663100A727CD /* Note.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +227,11 @@
 				0588A9B91BA358B200131163 /* MainWindowController.m in Sources */,
 				0588A99A1BA3492800131163 /* main.m in Sources */,
 				0588A9C21BA3660500131163 /* CoreDataModel.m in Sources */,
+				05B388681BA9663100A727CD /* Note.m in Sources */,
 				054485D11BA8C851008FF0E0 /* AboutWindowController.m in Sources */,
+				05B388651BA9663100A727CD /* Group+CoreDataProperties.m in Sources */,
+				05B388661BA9663100A727CD /* Group.m in Sources */,
+				05B388671BA9663100A727CD /* Note+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
