@@ -90,7 +90,6 @@
 		0588A9941BA3492800131163 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				052DC2FE1BAA024700B0235F /* Notes.entitlements */,
 				0588A9A91BA34C8400131163 /* Classes */,
 				0588A9AC1BA34C8400131163 /* Model */,
 				0588A9AF1BA34C8400131163 /* UI */,
@@ -102,6 +101,7 @@
 		0588A9981BA3492800131163 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				052DC2FE1BAA024700B0235F /* Notes.entitlements */,
 				0588A9A31BA3492800131163 /* Info.plist */,
 				0588A9991BA3492800131163 /* main.m */,
 			);
