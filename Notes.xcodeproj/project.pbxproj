@@ -32,6 +32,7 @@
 		052DC2F81BA9FB7D00B0235F /* NumberStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberStringValueTransformer.m; sourceTree = "<group>"; };
 		052DC2FA1BAA004F00B0235F /* Group.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Group.icns; sourceTree = "<group>"; };
 		052DC2FB1BAA004F00B0235F /* Note.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Note.icns; sourceTree = "<group>"; };
+		052DC2FE1BAA024700B0235F /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Notes.entitlements; sourceTree = "<group>"; };
 		054485CD1BA8AF14008FF0E0 /* Notes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Notes.icns; sourceTree = "<group>"; };
 		054485CF1BA8C851008FF0E0 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
 		054485D01BA8C851008FF0E0 /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		0588A9941BA3492800131163 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				052DC2FE1BAA024700B0235F /* Notes.entitlements */,
 				0588A9A91BA34C8400131163 /* Classes */,
 				0588A9AC1BA34C8400131163 /* Model */,
 				0588A9AF1BA34C8400131163 /* UI */,
@@ -192,6 +194,11 @@
 				TargetAttributes = {
 					0588A9911BA3492800131163 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -509,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -521,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Notes/Notes.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
