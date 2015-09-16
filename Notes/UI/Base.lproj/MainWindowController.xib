@@ -68,12 +68,13 @@
                                                                             <rect key="frame" x="5" y="0.0" width="30" height="30"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="30" id="oaD-bK-vku"/>
+                                                                                <constraint firstAttribute="height" constant="30" id="tke-YG-mlt"/>
                                                                             </constraints>
                                                                             <animations/>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSFolder" id="yha-4J-AOf"/>
                                                                         </imageView>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-wF-gEI">
-                                                                            <rect key="frame" x="43" y="6" width="131" height="17"/>
+                                                                            <rect key="frame" x="43" y="6" width="80" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="2oh-i6-XaI"/>
                                                                             </constraints>
@@ -87,14 +88,29 @@
                                                                                 <binding destination="frq-YR-9IT" name="value" keyPath="objectValue.name" id="fIE-Ej-4p9"/>
                                                                             </connections>
                                                                         </textField>
+                                                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-Do-ufW">
+                                                                            <rect key="frame" x="134" y="5" width="40" height="19"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="40" id="G4v-h1-5xC"/>
+                                                                            </constraints>
+                                                                            <animations/>
+                                                                            <buttonCell key="cell" type="recessed" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iRS-Yy-aGb">
+                                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                                                <font key="font" metaFont="systemBold" size="12"/>
+                                                                            </buttonCell>
+                                                                            <connections>
+                                                                                <binding destination="frq-YR-9IT" name="title" keyPath="objectValue.notes.@count" id="KP8-Kg-KUN"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="wgB-6i-lRa" firstAttribute="top" secondItem="frq-YR-9IT" secondAttribute="top" id="0Ly-ke-da3"/>
-                                                                        <constraint firstItem="wgB-6i-lRa" firstAttribute="centerY" secondItem="LfF-wF-gEI" secondAttribute="centerY" id="BKX-Dr-a1p"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="LfF-wF-gEI" secondAttribute="trailing" constant="3" id="Znf-Qe-Nia"/>
-                                                                        <constraint firstItem="LfF-wF-gEI" firstAttribute="leading" secondItem="wgB-6i-lRa" secondAttribute="trailing" constant="8" id="cWq-SH-756"/>
-                                                                        <constraint firstItem="wgB-6i-lRa" firstAttribute="leading" secondItem="frq-YR-9IT" secondAttribute="leading" constant="5" id="gBh-4g-qIg"/>
-                                                                        <constraint firstItem="LfF-wF-gEI" firstAttribute="top" secondItem="frq-YR-9IT" secondAttribute="top" constant="7" id="tAr-wb-AKG"/>
+                                                                        <constraint firstItem="LSb-Do-ufW" firstAttribute="centerY" secondItem="wgB-6i-lRa" secondAttribute="centerY" id="CVu-UN-SeG"/>
+                                                                        <constraint firstItem="LSb-Do-ufW" firstAttribute="centerY" secondItem="frq-YR-9IT" secondAttribute="centerY" id="G6n-qr-KrW"/>
+                                                                        <constraint firstItem="LSb-Do-ufW" firstAttribute="leading" secondItem="LfF-wF-gEI" secondAttribute="trailing" constant="11" id="Gpx-HW-noP"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="LSb-Do-ufW" secondAttribute="trailing" constant="3" id="TYd-ht-S1g"/>
+                                                                        <constraint firstItem="LSb-Do-ufW" firstAttribute="bottom" secondItem="LfF-wF-gEI" secondAttribute="bottom" id="o96-sn-UT5"/>
+                                                                        <constraint firstItem="wgB-6i-lRa" firstAttribute="leading" secondItem="frq-YR-9IT" secondAttribute="leading" constant="5" id="qQb-Zg-1y8"/>
+                                                                        <constraint firstItem="LfF-wF-gEI" firstAttribute="leading" secondItem="wgB-6i-lRa" secondAttribute="trailing" constant="8" symbolic="YES" id="tuG-qC-XwL"/>
                                                                     </constraints>
                                                                     <animations/>
                                                                     <connections>
