@@ -71,7 +71,7 @@
                                                                                 <constraint firstAttribute="height" constant="30" id="tke-YG-mlt"/>
                                                                             </constraints>
                                                                             <animations/>
-                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSFolder" id="yha-4J-AOf"/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Group" id="yha-4J-AOf"/>
                                                                         </imageView>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-wF-gEI">
                                                                             <rect key="frame" x="43" y="6" width="80" height="17"/>
@@ -299,15 +299,15 @@ CA
                                                                             <rect key="frame" x="1" y="1" width="401" height="40"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-lQ-HIs">
+                                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-lQ-HIs">
                                                                                     <rect key="frame" x="0.0" y="23" width="17" height="17"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="17" id="3dL-I7-Zv8"/>
                                                                                     </constraints>
                                                                                     <animations/>
-                                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSListViewTemplate" id="K1e-EB-YbS"/>
+                                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Note" id="K1e-EB-YbS"/>
                                                                                 </imageView>
-                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="maD-gI-Zyp">
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maD-gI-Zyp">
                                                                                     <rect key="frame" x="23" y="23" width="377" height="17"/>
                                                                                     <animations/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="83w-JQ-6hi">
@@ -319,7 +319,7 @@ CA
                                                                                         <binding destination="f2K-TW-eaC" name="value" keyPath="objectValue.title" id="zxE-MF-so1"/>
                                                                                     </connections>
                                                                                 </textField>
-                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-V1-gUs">
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-V1-gUs">
                                                                                     <rect key="frame" x="1" y="3" width="399" height="17"/>
                                                                                     <animations/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="JOX-6r-60P">
@@ -548,9 +548,9 @@ CA
         </arrayController>
     </objects>
     <resources>
+        <image name="Group" width="512" height="512"/>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSFolder" width="32" height="32"/>
-        <image name="NSListViewTemplate" width="14" height="10"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="Note" width="512" height="512"/>
     </resources>
 </document>
