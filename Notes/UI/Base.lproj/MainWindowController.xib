@@ -99,7 +99,11 @@
                                                                                 <font key="font" metaFont="systemBold" size="12"/>
                                                                             </buttonCell>
                                                                             <connections>
-                                                                                <binding destination="frq-YR-9IT" name="title" keyPath="objectValue.notes.@count" id="KP8-Kg-KUN"/>
+                                                                                <binding destination="frq-YR-9IT" name="title" keyPath="objectValue.notes.@count" id="TVb-Gd-9mO">
+                                                                                    <dictionary key="options">
+                                                                                        <string key="NSValueTransformerName">NumberStringValueTransformer</string>
+                                                                                    </dictionary>
+                                                                                </binding>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
