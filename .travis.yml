@@ -1,4 +1,4 @@
 language: objective-c
 xcode_project: Notes.xcodeproj
 xcode_scheme: Notes
-
+osx_image: xcode7.3
